@@ -200,7 +200,7 @@ function Hero({ ctaRef }: { ctaRef: React.RefObject<HTMLAnchorElement | null> })
           </span>
           <span>Join 10,000+ writers we&rsquo;ve taught</span>
           <img
-            src="/images/s30-people.png"
+            src="/images/s30-people.webp"
             alt="Recent sprint students"
             loading="lazy"
             className="h-7 w-auto rounded-[6px]"
@@ -273,7 +273,7 @@ function WhatIsTheSprint() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="flex justify-center lg:justify-start">
             <img
-              src="/images/roadmap.png"
+              src="/images/roadmap.webp"
               alt="The sprint roadmap: category positioning, choosing your platform, writing mastery, traffic secrets, and monetization."
               className="w-full max-w-[520px] object-contain"
               loading="lazy"
@@ -305,13 +305,13 @@ function Instructors() {
     {
       name: 'Nicolas Cole',
       role: 'Co-Founder, Ship 30 for 30 & Write With AI',
-      img: '/images/cole-headshot.png',
+      img: '/images/cole-headshot.webp',
       bio: 'I became the #1 most-read writer on Quora, turned that into a column at Inc Magazine and a multimillion-dollar ghostwriting agency, and co-built Category Pirates — a multi-6-figure paid newsletter whose republished “mini-books” added another $150,000+ per year from Amazon alone. Everything I know about positioning and monetizing newsletters is in this sprint.',
     },
     {
       name: 'Dickie Bush',
       role: 'Co-Founder, Ship 30 for 30',
-      img: '/images/dickie-headshot.png',
+      img: '/images/dickie-headshot.webp',
       bio: 'I started writing online in January 2020 and turned a 30-day experiment into Ship 30 for 30 — the internet’s #1 writing program. Together with Cole, I’ve used email and newsletter writing to generate over $20,000,000 across our portfolio of digital writing businesses, including the #1 paid education newsletter on all of Substack.',
     },
   ]
@@ -479,9 +479,9 @@ function LiveSessions() {
    ═══════════════════════════════════════════════════════════ */
 function BonusSection() {
   const bonuses = [
-    { tag: 'Bonus #1', title: 'Viral Hook Vault', desc: '24 proven content hooks & styles crushing it across X (Twitter) and LinkedIn — pair them with your Day 4 traffic engine to turn every newsletter into scroll-stopping social posts.', value: '$299', img: '/images/bonus-1-hook-vault.png' },
-    { tag: 'Bonus #2', title: 'Build Your Audience On Autopilot', desc: 'The blueprint we’ve used to grow our audience to 750,000+ followers over the past 3 years (instead of wasting 10,000 hours “figuring it out” on your own).', value: '$199', img: '/images/bonus-2-audience-autopilot.png' },
-    { tag: 'Bonus #3', title: 'Digital Writing Book Bundle', desc: 'Free digital copies of our library of books: The Art & Business of Online Writing, The Art & Business of Ghostwriting, and Writer Career Paths.', value: '$100', img: '/images/bonus-3-swo-sprint-book-bundle.png' },
+    { tag: 'Bonus #1', title: 'Viral Hook Vault', desc: '24 proven content hooks & styles crushing it across X (Twitter) and LinkedIn — pair them with your Day 4 traffic engine to turn every newsletter into scroll-stopping social posts.', value: '$299', img: '/images/bonus-1-hook-vault.webp' },
+    { tag: 'Bonus #2', title: 'Build Your Audience On Autopilot', desc: 'The blueprint we’ve used to grow our audience to 750,000+ followers over the past 3 years (instead of wasting 10,000 hours “figuring it out” on your own).', value: '$199', img: '/images/bonus-2-audience-autopilot.webp' },
+    { tag: 'Bonus #3', title: 'Digital Writing Book Bundle', desc: 'Free digital copies of our library of books: The Art & Business of Online Writing, The Art & Business of Ghostwriting, and Writer Career Paths.', value: '$100', img: '/images/bonus-3-swo-sprint-book-bundle.webp' },
   ]
   return (
     <section id="bonuses" className="py-20 md:py-28 px-5 md:px-8">
@@ -539,7 +539,7 @@ function AIWritingSkool() {
         </p>
         <div className="flex flex-col md:flex-row gap-10 md:gap-12 items-start">
           <div className="w-full md:w-[45%] flex-shrink-0">
-            <img src="/images/AIWS.png" alt="AI Writing Skool" className="w-full object-contain rounded-card border border-line shadow-card" loading="lazy" />
+            <img src="/images/AIWS.webp" alt="AI Writing Skool" className="w-full object-contain rounded-card border border-line shadow-card" loading="lazy" />
           </div>
           <div className="flex-1">
             <Eyebrow className="mb-5">Inside, you&rsquo;ll unlock:</Eyebrow>
