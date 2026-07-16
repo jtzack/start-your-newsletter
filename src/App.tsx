@@ -155,10 +155,43 @@ function CountdownTimer({ targetDate, compact, hero }: { targetDate: Date; compa
 /* ═══════════════════════════════════════════════════════════
    1. HERO — waitlist DNA: marker-highlight headline, yellow CTA
    ═══════════════════════════════════════════════════════════ */
+
+/* The roadmap track — a closed loop traced through the five yellow session
+   stops (percent coordinates measured from the poster art). A tracer dot
+   laps the route continuously; each stop flashes as the dot passes it
+   (delays = each stop's arc-length fraction of the lap). */
+const TRACK_PATH = 'M 54.4 10.7 C 59.7 8.7, 62.3 23.8, 65.1 32.8 C 67.9 41.8, 76.9 56.8, 71.3 65.0 C 65.7 73.2, 37.6 85.1, 31.3 81.8 C 25.0 78.5, 29.4 56.8, 33.3 44.9 C 37.1 33.0, 49.1 12.7, 54.4 10.7 Z'
+const TRACK_DUR = 16 // seconds per lap
+const ROAD_STOPS = [
+  { x: 54.4, y: 10.7, t: 0.0 },
+  { x: 65.1, y: 32.8, t: 0.142 * TRACK_DUR },
+  { x: 71.3, y: 65.0, t: 0.326 * TRACK_DUR },
+  { x: 31.3, y: 81.8, t: 0.57 * TRACK_DUR },
+  { x: 33.3, y: 44.9, t: 0.779 * TRACK_DUR },
+]
+
+function HeroRoadmap() {
+  return (
+    <div className="hero-roadmap" aria-hidden="true">
+      <div className="hr-box">
+        <img src="/images/roadmap.webp" alt="" />
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path className="hr-track" d={TRACK_PATH} />
+          {ROAD_STOPS.map((s, i) => (
+            <circle key={i} className="hr-pulse" cx={s.x} cy={s.y} r="2.4" style={{ animationDelay: `${s.t.toFixed(2)}s` }} />
+          ))}
+          <circle className="hr-tracer" r="1.1" cx="0" cy="0" style={{ offsetPath: `path('${TRACK_PATH}')` }} />
+        </svg>
+      </div>
+    </div>
+  )
+}
+
 function Hero({ ctaRef }: { ctaRef: React.RefObject<HTMLAnchorElement | null> }) {
   return (
     <header className="relative isolate overflow-hidden flex items-center justify-center min-h-screen bg-ink">
       <div className="hero-glow" aria-hidden="true" />
+      <HeroRoadmap />
       <div className="hero-vignette" aria-hidden="true" />
 
       <div className="relative z-[2] w-full max-w-[960px] mx-auto px-5 md:px-8 py-20 text-center flex flex-col items-center">
@@ -444,12 +477,11 @@ function LiveSessions() {
               const isEven = s.num % 2 === 0
               return (
                 <div key={s.num} className="relative">
-                  <div className="absolute z-10 w-11 h-11 rounded-full bg-accent flex items-center justify-center left-0 md:left-1/2 md:-translate-x-1/2 shadow-cta">
-                    <span className="font-black text-[18px] text-ink leading-none">{s.num}</span>
+                  <div className="absolute z-10 w-[60px] h-[60px] rounded-full bg-card-2 border-2 border-accent flex items-center justify-center -left-[9px] md:left-1/2 translate-x-0 md:-translate-x-1/2 shadow-cta">
+                    <img src={s.icon} alt="" loading="lazy" className="h-8 w-auto object-contain" />
                   </div>
                   <div className={`pl-16 md:pl-0 md:w-[45%] ${isEven ? 'md:ml-auto md:pl-14' : 'md:mr-auto md:pr-14 md:text-right'}`}>
-                    <img src={s.icon} alt="" loading="lazy" className={`h-14 md:h-16 w-auto object-contain mb-3 ${isEven ? '' : 'md:ml-auto'}`} />
-                    <span className="inline-block bg-card-2 border border-line text-accent font-mono text-[11px] font-bold uppercase tracking-[0.12em] px-3 py-1 rounded-[6px] mb-2.5">{s.date}</span>
+                    <span className="inline-block bg-card-2 border border-line text-accent font-mono text-[11px] font-bold uppercase tracking-[0.12em] px-3 py-1 rounded-[6px] mb-2.5">Day {s.num} · {s.date}</span>
                     <h3 className="font-bold text-paper mb-2.5" style={{ fontSize: 'clamp(22px, 2.6vw, 28px)' }}>{s.title}</h3>
                     <p className="text-[15px] text-fg-2 leading-[1.6] mb-3">{s.desc}</p>
                     <div className={`inline-block bg-card-2 border border-line rounded-[8px] px-3 py-2 ${isEven ? '' : 'md:ml-auto'}`}>

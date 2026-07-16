@@ -45,6 +45,46 @@ body {
     radial-gradient(46% 40% at 18% 78%, rgba(233,239,58,0.05), transparent 70%);
 }
 
+/* ---------- Hero roadmap — subtle poster backdrop + animated lap ---------- */
+.hero-roadmap {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.hr-box { position: relative; height: 94%; aspect-ratio: 1 / 1; flex-shrink: 0; }
+.hr-box img {
+  width: 100%; height: 100%; object-fit: contain; opacity: 0.1;
+  /* melt the poster's hard rectangle into the black background */
+  -webkit-mask-image: radial-gradient(58% 58% at 50% 50%, #000 45%, transparent 82%);
+  mask-image: radial-gradient(58% 58% at 50% 50%, #000 45%, transparent 82%);
+}
+.hr-box svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.hr-track { fill: none; stroke: rgba(233,239,58,0.08); stroke-width: 0.5; }
+.hr-tracer {
+  fill: #E9EF3A;
+  filter: drop-shadow(0 0 4px rgba(233,239,58,0.9));
+  /* offset-path is set inline (shares TRACK_PATH with the pulse timing) */
+  animation: hrLap 16s linear infinite;
+}
+@keyframes hrLap {
+  from { offset-distance: 0%; }
+  to   { offset-distance: 100%; }
+}
+.hr-pulse {
+  fill: none; stroke: #E9EF3A; stroke-width: 0.45; opacity: 0;
+  transform-box: fill-box; transform-origin: center;
+  animation: hrPulse 16s linear infinite;
+}
+@keyframes hrPulse {
+  0%   { opacity: 0; transform: scale(0.35); }
+  1.5% { opacity: 0.95; }
+  6.5% { opacity: 0; transform: scale(2.1); }
+  100% { opacity: 0; transform: scale(0.35); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hr-tracer, .hr-pulse { display: none; }
+}
+
 /* subtle grain-free vignette to focus the hero */
 .hero-vignette {
   position: absolute; inset: 0; z-index: 1; pointer-events: none;
