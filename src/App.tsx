@@ -418,11 +418,11 @@ function Divider() {
    ═══════════════════════════════════════════════════════════ */
 function LiveSessions() {
   const sessions = [
-    { num: 1, date: 'Mon Jul 27', title: 'Category Newsletter Positioning', desc: 'How to name your newsletter so you’re seen as the “category king” of your niche, positioned as a thought leader, and differentiated from all competition. Positioning dictates 80%+ of your newsletter’s success — we nail it on Day 1.', asset: 'Newsletter Name Generator' },
-    { num: 2, date: 'Tue Jul 28', title: 'Choose Your Newsletter Platform', desc: 'Kit vs. Beehiiv vs. Substack — the real pricing math in 2026 (including the fees nobody puts on their pricing page), how each discovery engine works, and the one question that makes the decision 10X easier. Pick your platform TODAY and never think about it again.', asset: 'Platform Decision Framework' },
-    { num: 3, date: 'Wed Jul 29', title: 'Newsletter Writing Mastery', desc: 'How to write “the perfect newsletter” in 60 minutes or less — subject lines readers can’t ignore, a modular “writing is like playing with Legos” system, and how to train AI on YOUR writing style so drafts sound like you, not a robot.', asset: 'Voice Template + Weekly Newsletter Writer Prompt' },
-    { num: 4, date: 'Thu Jul 30', title: 'Newsletter Traffic Secrets', desc: 'You never have to “create social content” again. Extract 10+ social posts from every newsletter you write and drive organic traffic from X, LinkedIn, and Substack Notes to acquire subscribers for $0 — with a 20-minute daily system.', asset: 'Newsletter-to-Social Repurposer Prompt' },
-    { num: 5, date: 'Fri Jul 31', title: 'Newsletter Monetization Methods', desc: 'The 3 best ways to monetize without ads: Paid Newsletters, Books, and Digital Products. Plus the decision framework for which to launch first — and your 90-day monetization plan.', asset: 'Monetization Roadmap Prompt' },
+    { num: 1, icon: '/images/session-1.webp', date: 'Mon Jul 27', title: 'Category Newsletter Positioning', desc: 'How to name your newsletter so you’re seen as the “category king” of your niche, positioned as a thought leader, and differentiated from all competition. Positioning dictates 80%+ of your newsletter’s success — we nail it on Day 1.', asset: 'Newsletter Name Generator' },
+    { num: 2, icon: '/images/session-2.webp', date: 'Tue Jul 28', title: 'Choose Your Newsletter Platform', desc: 'Kit vs. Beehiiv vs. Substack — the real pricing math in 2026 (including the fees nobody puts on their pricing page), how each discovery engine works, and the one question that makes the decision 10X easier. Pick your platform TODAY and never think about it again.', asset: 'Platform Decision Framework' },
+    { num: 3, icon: '/images/session-3.webp', date: 'Wed Jul 29', title: 'Newsletter Writing Mastery', desc: 'How to write “the perfect newsletter” in 60 minutes or less — subject lines readers can’t ignore, a modular “writing is like playing with Legos” system, and how to train AI on YOUR writing style so drafts sound like you, not a robot.', asset: 'Voice Template + Weekly Newsletter Writer Prompt' },
+    { num: 4, icon: '/images/session-4.webp', date: 'Thu Jul 30', title: 'Newsletter Traffic Secrets', desc: 'You never have to “create social content” again. Extract 10+ social posts from every newsletter you write and drive organic traffic from X, LinkedIn, and Substack Notes to acquire subscribers for $0 — with a 20-minute daily system.', asset: 'Newsletter-to-Social Repurposer Prompt' },
+    { num: 5, icon: '/images/session-5.webp', date: 'Fri Jul 31', title: 'Newsletter Monetization Methods', desc: 'The 3 best ways to monetize without ads: Paid Newsletters, Books, and Digital Products. Plus the decision framework for which to launch first — and your 90-day monetization plan.', asset: 'Monetization Roadmap Prompt' },
   ]
   return (
     <section id="sessions" className="py-20 md:py-28 px-5 md:px-8">
@@ -448,6 +448,7 @@ function LiveSessions() {
                     <span className="font-black text-[18px] text-ink leading-none">{s.num}</span>
                   </div>
                   <div className={`pl-16 md:pl-0 md:w-[45%] ${isEven ? 'md:ml-auto md:pl-14' : 'md:mr-auto md:pr-14 md:text-right'}`}>
+                    <img src={s.icon} alt="" loading="lazy" className={`h-14 md:h-16 w-auto object-contain mb-3 ${isEven ? '' : 'md:ml-auto'}`} />
                     <span className="inline-block bg-card-2 border border-line text-accent font-mono text-[11px] font-bold uppercase tracking-[0.12em] px-3 py-1 rounded-[6px] mb-2.5">{s.date}</span>
                     <h3 className="font-bold text-paper mb-2.5" style={{ fontSize: 'clamp(22px, 2.6vw, 28px)' }}>{s.title}</h3>
                     <p className="text-[15px] text-fg-2 leading-[1.6] mb-3">{s.desc}</p>
@@ -479,9 +480,9 @@ function LiveSessions() {
    ═══════════════════════════════════════════════════════════ */
 function BonusSection() {
   const bonuses = [
-    { tag: 'Bonus #1', title: 'Subject Line Swipe File', desc: 'How to write irresistible subject lines with AI — plus the 5 golden rules to follow for every email that almost guarantee your newsletter gets opened.', value: '$199', icon: '✉️' },
-    { tag: 'Bonus #2', title: 'Newsletter Opening Hooks', desc: 'The exact prompt we use to generate strong opening hooks for emails and posts. Give it your topic and it produces multiple hook angles designed to stop readers and make them keep reading.', value: '$99', icon: '🪝' },
-    { tag: 'Bonus #3', title: '30-Day Free Trial To Ghostbase', desc: 'Ghostbase is a custom AI model trained on Nicolas Cole’s library of content (well over a billion views) and a decade of writing experience. Just describe what you want to write and it generates premium content that sounds like you, built for LinkedIn.', value: '$99', icon: '👻' },
+    { tag: 'Bonus #1', title: 'Subject Line Swipe File', desc: 'How to write irresistible subject lines with AI — plus the 5 golden rules to follow for every email that almost guarantee your newsletter gets opened.', value: '$199', icon: '/images/bonus-subject-lines.webp' },
+    { tag: 'Bonus #2', title: 'Newsletter Opening Hooks', desc: 'The exact prompt we use to generate strong opening hooks for emails and posts. Give it your topic and it produces multiple hook angles designed to stop readers and make them keep reading.', value: '$99', icon: '/images/bonus-hooks.webp' },
+    { tag: 'Bonus #3', title: '30-Day Free Trial To Ghostbase', desc: 'Ghostbase is a custom AI model trained on Nicolas Cole’s library of content (well over a billion views) and a decade of writing experience. Just describe what you want to write and it generates premium content that sounds like you, built for LinkedIn.', value: '$99', icon: '/images/bonus-ghostbase.webp' },
   ]
   return (
     <section id="bonuses" className="py-20 md:py-28 px-5 md:px-8">
@@ -497,8 +498,8 @@ function BonusSection() {
             <div key={b.tag} className="bg-card-2 rounded-card p-7 flex flex-col border border-line">
               <div className="flex items-start justify-between gap-4 mb-4">
                 <span className="inline-block bg-card-3 text-accent font-mono text-[11px] font-bold uppercase tracking-[0.12em] px-3 py-1 rounded-[6px]">{b.tag}</span>
-                <div className="w-16 h-16 flex-shrink-0 rounded-[10px] bg-card-3 flex items-center justify-center">
-                  <span style={{ fontSize: 32, lineHeight: 1 }} role="img" aria-hidden="true">{b.icon}</span>
+                <div className="h-16 flex-shrink-0 flex items-center justify-end">
+                  <img src={b.icon} alt="" className="h-full w-auto object-contain" loading="lazy" />
                 </div>
               </div>
               <h3 className="font-bold text-[20px] text-paper mb-3">{b.title}</h3>
