@@ -479,9 +479,9 @@ function LiveSessions() {
    ═══════════════════════════════════════════════════════════ */
 function BonusSection() {
   const bonuses = [
-    { tag: 'Bonus #1', title: 'Viral Hook Vault', desc: '24 proven content hooks & styles crushing it across X (Twitter) and LinkedIn — pair them with your Day 4 traffic engine to turn every newsletter into scroll-stopping social posts.', value: '$299', img: '/images/bonus-1-hook-vault.webp' },
-    { tag: 'Bonus #2', title: 'Build Your Audience On Autopilot', desc: 'The blueprint we’ve used to grow our audience to 750,000+ followers over the past 3 years (instead of wasting 10,000 hours “figuring it out” on your own).', value: '$199', img: '/images/bonus-2-audience-autopilot.webp' },
-    { tag: 'Bonus #3', title: 'Digital Writing Book Bundle', desc: 'Free digital copies of our library of books: The Art & Business of Online Writing, The Art & Business of Ghostwriting, and Writer Career Paths.', value: '$100', img: '/images/bonus-3-swo-sprint-book-bundle.webp' },
+    { tag: 'Bonus #1', title: 'Subject Line Swipe File', desc: 'How to write irresistible subject lines with AI — plus the 5 golden rules to follow for every email that almost guarantee your newsletter gets opened.', value: '$199', icon: '✉️' },
+    { tag: 'Bonus #2', title: 'Newsletter Opening Hooks', desc: 'The exact prompt we use to generate strong opening hooks for emails and posts. Give it your topic and it produces multiple hook angles designed to stop readers and make them keep reading.', value: '$99', icon: '🪝' },
+    { tag: 'Bonus #3', title: '30-Day Free Trial To Ghostbase', desc: 'Ghostbase is a custom AI model trained on Nicolas Cole’s library of content (well over a billion views) and a decade of writing experience. Just describe what you want to write and it generates premium content that sounds like you, built for LinkedIn.', value: '$99', icon: '👻' },
   ]
   return (
     <section id="bonuses" className="py-20 md:py-28 px-5 md:px-8">
@@ -497,8 +497,8 @@ function BonusSection() {
             <div key={b.tag} className="bg-card-2 rounded-card p-7 flex flex-col border border-line">
               <div className="flex items-start justify-between gap-4 mb-4">
                 <span className="inline-block bg-card-3 text-accent font-mono text-[11px] font-bold uppercase tracking-[0.12em] px-3 py-1 rounded-[6px]">{b.tag}</span>
-                <div className="w-20 h-20 flex-shrink-0 rounded-[10px] bg-card-3 flex items-center justify-center p-2.5">
-                  <img src={b.img} alt={b.title} className="max-w-full max-h-full object-contain" loading="lazy" />
+                <div className="w-16 h-16 flex-shrink-0 rounded-[10px] bg-card-3 flex items-center justify-center">
+                  <span style={{ fontSize: 32, lineHeight: 1 }} role="img" aria-hidden="true">{b.icon}</span>
                 </div>
               </div>
               <h3 className="font-bold text-[20px] text-paper mb-3">{b.title}</h3>
@@ -581,9 +581,9 @@ function Pricing() {
     { name: 'Session Replays — Yours Forever', price: '$300' },
     { name: 'Lifetime Access to the Curriculum', price: 'Priceless' },
     { name: '30-Day AI Writing Skool Trial', price: '$99' },
-    { name: 'BONUS: Viral Hook Vault', price: '$299' },
-    { name: 'BONUS: Build Your Audience On Autopilot', price: '$199' },
-    { name: 'BONUS: Digital Writing Book Bundle', price: '$100' },
+    { name: 'BONUS: Subject Line Swipe File', price: '$199' },
+    { name: 'BONUS: Newsletter Opening Hooks', price: '$99' },
+    { name: 'BONUS: 30-Day Free Trial To Ghostbase', price: '$99' },
   ]
   return (
     <section id="pricing" className="py-24 md:py-32 px-5 md:px-8">
@@ -604,7 +604,7 @@ function Pricing() {
             ))}
             <div className="flex justify-between items-center pt-4 mt-3 border-t border-line">
               <span className="text-[14px] font-bold text-paper uppercase tracking-[0.06em]">Total Value</span>
-              <span className="font-black text-[24px] text-paper line-through decoration-accent decoration-2">$3,997</span>
+              <span className="font-black text-[24px] text-paper line-through decoration-accent decoration-2">$3,796</span>
             </div>
           </div>
           {/* Price reveal — yellow panel */}
