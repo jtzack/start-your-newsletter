@@ -679,7 +679,7 @@ function CTABand() {
           a newsletter&rdquo; to a named, positioned, published newsletter with a growth engine and a monetization plan.
         </p>
         <CTA size="lg" track="Final">Join The Sprint</CTA>
-        <p className="text-[14px] text-fg-3 mt-6">Live sprint begins Monday, July 27, 2026. Cart closes the moment Day 1 kicks off.</p>
+        <p className="text-[14px] text-fg-3 mt-6">Live sprint begins Monday, July 27, 2026.</p>
       </div>
     </section>
   )
