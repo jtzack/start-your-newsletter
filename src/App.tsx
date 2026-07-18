@@ -607,11 +607,10 @@ function AIWritingSkool() {
    ═══════════════════════════════════════════════════════════ */
 function Pricing() {
   const items = [
+    { name: 'The Start Your Newsletter Sprint Curriculum', price: '$500' },
     { name: '5 x Live Sessions (Mon–Fri, 3PM ET)', price: '$1,500' },
-    { name: 'A 5-Day Launch & Publish Schedule', price: '$500' },
-    { name: 'Done-For-You Templates For Every Session', price: '$500' },
-    { name: '5 Done-For-You AI Prompts', price: '$500' },
-    { name: 'Session Replays — Yours Forever', price: '$300' },
+    { name: 'The Sprint Session Guide', price: '$300' },
+    { name: 'Done-For-You AI Prompts & Templates', price: '$500' },
     { name: 'Lifetime Access to the Curriculum', price: 'Priceless' },
     { name: '30-Day AI Writing Skool Trial', price: '$99' },
     { name: 'BONUS: Subject Line Swipe File', price: '$199' },
@@ -637,7 +636,7 @@ function Pricing() {
             ))}
             <div className="flex justify-between items-center pt-4 mt-3 border-t border-line">
               <span className="text-[14px] font-bold text-paper uppercase tracking-[0.06em]">Total Value</span>
-              <span className="font-black text-[24px] text-paper line-through decoration-accent decoration-2">$3,796</span>
+              <span className="font-black text-[24px] text-paper line-through decoration-accent decoration-2">$3,296</span>
             </div>
           </div>
           {/* Price reveal — yellow panel */}
