@@ -298,10 +298,6 @@ function WhatIsTheSprint() {
           <h2 className="font-extrabold text-paper uppercase tracking-display max-w-[20ch]" style={{ fontSize: 'clamp(30px, 4.6vw, 52px)', lineHeight: 1.05 }}>
             What is the Start &amp; Scale Your Newsletter Sprint?
           </h2>
-          <p className="text-[17px] text-fg-2 max-w-[680px] mt-5 leading-[1.6]">
-            A live, 5-day SPRINT — not another course collecting dust on your digital shelf. Every day you show up,
-            we build together, and you leave the session with the next piece of your newsletter <em className="text-paper not-italic font-semibold">done</em>.
-          </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="flex justify-center lg:justify-start">
