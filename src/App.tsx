@@ -461,6 +461,20 @@ function NewsletterProof() {
             </div>
           ))}
         </div>
+        <div className="mt-6 bg-card-2 border border-line rounded-card overflow-hidden grid lg:grid-cols-2 items-center">
+          <div className="p-7 md:p-10">
+            <p className="font-extrabold text-[24px] md:text-[28px] text-paper leading-tight mb-4">
+              And it&rsquo;s not just <em className="text-accent not-italic">our</em> newsletters.
+            </p>
+            <p className="text-[16px] text-fg-2 leading-[1.6] max-w-[440px]">
+              Writers inside our programs use this exact playbook to launch and grow their own newsletters —
+              here&rsquo;s a small sample of their wins.
+            </p>
+          </div>
+          <div className="p-5 md:p-8">
+            <img src="/images/syn-social-proof.png" alt="Screenshots of students sharing newsletter launches, first sales, and subscriber milestones" className="w-full h-auto" loading="lazy" />
+          </div>
+        </div>
       </div>
     </section>
   )
