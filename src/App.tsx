@@ -355,11 +355,11 @@ function Instructors() {
         <div>
           <Eyebrow className="mb-5">Meet your instructors</Eyebrow>
           <h2 className="font-extrabold text-paper uppercase tracking-display mb-6" style={{ fontSize: 'clamp(30px, 4vw, 46px)', lineHeight: 1.06 }}>
-            Learn from the team behind the internet&rsquo;s biggest newsletters.
+            Built by the founders of the internet&rsquo;s #1 writing program.
           </h2>
           <p className="text-[17px] text-fg-2 leading-[1.6] max-w-[520px] mb-8">
-            This is the internal playbook Nicolas Cole &amp; Dickie Bush have used to build (from scratch!) newsletters
-            that have driven <strong className="text-paper font-semibold">millions of dollars</strong> — taught live, over 5 days.
+            Created by Nicolas Cole &amp; Dickie Bush — the team behind <strong className="text-paper font-semibold">Ship 30 for 30</strong>,
+            the program that&rsquo;s taught over 10,000 writers to start writing online.
           </p>
           <div className="flex flex-wrap gap-2.5">
             {pills.map((s) => (
@@ -377,6 +377,86 @@ function Instructors() {
                 <p className="font-extrabold text-[20px] text-accent leading-none">{c.name}</p>
                 <p className="font-mono text-[11px] font-bold uppercase tracking-[0.08em] text-fg-3 mt-2 mb-3">{c.role}</p>
                 <p className="text-[15px] leading-[1.6] text-fg-2">{c.bio}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ═══════════════════════════════════════════════════════════
+   4B. OUR NEWSLETTERS — PROOF
+   ═══════════════════════════════════════════════════════════ */
+function NewsletterProof() {
+  const newsletters = [
+    {
+      name: 'Category Pirates',
+      img: '/images/category-pirates.png',
+      points: [
+        'The leading newsletter on Category Design',
+        'Top 10 Business Newsletter on Substack',
+        '30,000+ free subscribers',
+        '$150,000+ per year in paid subscriptions',
+        'The engine of a 7+ figure digital product & consulting business',
+      ],
+    },
+    {
+      name: 'Write With AI',
+      img: '/images/write-with-ai.png',
+      points: [
+        'The leading newsletter on Writing With AI',
+        'Top 5 Education Newsletter on Substack',
+        '50,000+ free subscribers',
+        '$300,000+ per year in paid subscriptions',
+        'The engine of a 7+ figure digital product business',
+      ],
+    },
+    {
+      name: 'Start Writing Online',
+      img: '/images/start-writing-online.png',
+      points: [
+        'The leading newsletter on how to Start Writing Online',
+        '100,000+ free subscribers',
+        'The engine of Ship 30 for 30, the fastest-growing writing program on the Internet',
+      ],
+    },
+    {
+      name: 'Start Ghostwriting',
+      img: '/images/start-ghostwriting.png',
+      points: [
+        'The leading newsletter on how to Start Ghostwriting',
+        '100,000+ free subscribers',
+        'The engine of Premium Ghostwriting Academy, the leading ghostwriting training program on the Internet and 8-figure business',
+      ],
+    },
+  ]
+  return (
+    <section id="proof" className="py-20 md:py-28 px-5 md:px-8">
+      <div className="max-w-container mx-auto">
+        <div className="text-center mb-12">
+          <Eyebrow className="mb-4">Our newsletters</Eyebrow>
+          <h2 className="font-extrabold text-paper uppercase tracking-display mx-auto max-w-[24ch]" style={{ fontSize: 'clamp(30px, 4.4vw, 50px)', lineHeight: 1.05 }}>
+            Proof we know what we&rsquo;re talking about!
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {newsletters.map((n) => (
+            <div key={n.name} className="bg-card-2 border border-line rounded-card overflow-hidden flex flex-col">
+              <div className="h-[220px] md:h-[260px] overflow-hidden border-b border-line bg-card-3">
+                <img src={n.img} alt={`The ${n.name} newsletter`} className="w-full h-full object-cover object-top" loading="lazy" />
+              </div>
+              <div className="p-6 md:p-7">
+                <p className="font-extrabold text-[22px] text-accent leading-none mb-5">{n.name}</p>
+                <ul className="flex flex-col gap-3">
+                  {n.points.map((p) => (
+                    <li key={p} className="flex gap-3 items-start">
+                      <Check />
+                      <span className="text-[15px] leading-[1.55] text-fg-2 pt-0.5">{p}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
@@ -806,6 +886,7 @@ export default function App() {
       <FadeIn><WhyNewsletter /></FadeIn>
       <FadeIn><WhatIsTheSprint /></FadeIn>
       <FadeIn><Instructors /></FadeIn>
+      <FadeIn><NewsletterProof /></FadeIn>
       <FadeIn><RightForYou /></FadeIn>
       <Divider />
       <FadeIn><LiveSessions /></FadeIn>
