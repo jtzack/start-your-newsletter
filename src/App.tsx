@@ -697,7 +697,7 @@ function FAQ() {
     { q: 'Which platform will we use — Kit, Beehiiv, or Substack?', a: 'Your choice — Day 2 is an entire session on exactly this decision, including the real 2026 pricing math and a framework that makes the choice 10X easier. Everything else in the sprint is platform-agnostic.' },
     { q: 'Won’t AI-assisted writing sound generic?', a: 'Not the way we teach it. On Day 3 you’ll train AI on YOUR writing style, so drafts sound like you, not a robot. There’s a difference between AI-generated slop and AI-assisted writing — we teach the second one.' },
     { q: 'How long do I have access?', a: 'Lifetime. Every replay, template, and AI prompt is yours forever — including every update we ship to the curriculum.' },
-    { q: 'Is there a guarantee?', a: 'Yes — your Sprint investment is 100% risk free. If you go through the sessions and don’t feel like you received an insane amount of value, just send us an email within 14 days of purchase and we’ll refund 100% of your money.' },
+    { q: 'Is there a guarantee?', a: 'We provide a tremendous amount of free education on the internet for writers. If you’re hesitant as to whether this Sprint is for you, consume some of our free stuff first. All sales are final.' },
   ]
   const [open, setOpen] = useState<number | null>(0)
   return (
