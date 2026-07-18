@@ -697,6 +697,7 @@ function FAQ() {
     { q: 'Which platform will we use — Kit, Beehiiv, or Substack?', a: 'Your choice — Day 2 is an entire session on exactly this decision, including the real 2026 pricing math and a framework that makes the choice 10X easier. Everything else in the sprint is platform-agnostic.' },
     { q: 'Won’t AI-assisted writing sound generic?', a: 'Not the way we teach it. On Day 3 you’ll train AI on YOUR writing style, so drafts sound like you, not a robot. There’s a difference between AI-generated slop and AI-assisted writing — we teach the second one.' },
     { q: 'How long do I have access?', a: 'Lifetime. Every replay, template, and AI prompt is yours forever — including every update we ship to the curriculum.' },
+    { q: 'How is this different than Category Newsletter Creator?', a: 'In this 5-day sprint, we are going to cover everything you need to start & scale a newsletter. But, there are all kinds of other things you can do to market and grow your newsletter, including building advanced sequences, stacking monetization methods on top of each other, etc. Which is what we cover inside Category Newsletter Creator.' },
     { q: 'Is there a guarantee?', a: 'We provide a tremendous amount of free education on the internet for writers. If you’re hesitant as to whether this Sprint is for you, consume some of our free stuff first. All sales are final.' },
   ]
   const [open, setOpen] = useState<number | null>(0)
