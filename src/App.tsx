@@ -644,7 +644,7 @@ function Pricing() {
           <div className="bg-accent p-8 md:p-10 text-center">
             <p className="font-mono text-[11px] font-bold uppercase tracking-caps text-ink/60">Your price today</p>
             <div className="flex items-baseline justify-center gap-3 mt-2">
-              <span className="font-black text-ink/40 leading-none line-through decoration-2" style={{ fontSize: 'clamp(32px,5.5vw,48px)' }}>$149</span>
+              <span className="font-black text-ink/40 leading-none line-through decoration-2" style={{ fontSize: 'clamp(32px,5.5vw,48px)' }}>$199</span>
               <span className="font-black text-ink leading-none" style={{ fontSize: 'clamp(64px,11vw,96px)' }}>$99</span>
             </div>
             <a
