@@ -204,7 +204,7 @@ function Hero({ ctaRef }: { ctaRef: React.RefObject<HTMLAnchorElement | null> })
           className="font-black text-paper uppercase mt-6"
           style={{ fontSize: 'clamp(32px, 4.6vw, 64px)', lineHeight: 0.98, letterSpacing: '-0.01em', textWrap: 'balance' as React.CSSProperties['textWrap'] }}
         >
-          How To Build A <span className="hl">6-Figure Newsletter</span> From Scratch{' '}
+          Build A <span className="hl">6&#8209;Figure Newsletter</span> From Scratch{' '}
           <span className="text-accent italic normal-case">in just 5 days</span>
         </h1>
 
