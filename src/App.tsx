@@ -2,7 +2,7 @@ import './index.css'
 import { useState, useEffect, useRef } from 'react'
 import * as Fathom from 'fathom-client'
 
-const CTA_URL = 'https://ship.samcart.com/products/start-your-newsletter-sprint'
+const CTA_URL = 'https://ship.samcart.com/products/start-your-newsletter-sprint?coupon=ACTION100'
 
 // Cart closes the moment Day 1 kicks off: Monday, July 27, 2026, 3PM ET
 const CART_CLOSE_DATE = new Date('2026-07-27T19:00:00Z')
