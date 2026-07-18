@@ -855,7 +855,7 @@ function StickyCtaBar({ heroCtaRef }: { heroCtaRef: React.RefObject<HTMLAnchorEl
   }, [heroCtaRef])
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 border-t border-line backdrop-blur-md transition-transform duration-300 ${show ? 'translate-y-0' : 'translate-y-full'}`}
+      className={`fixed top-0 left-0 right-0 z-50 border-b border-line backdrop-blur-md transition-transform duration-300 ${show ? 'translate-y-0' : '-translate-y-full'}`}
       style={{ background: 'rgba(11,11,12,0.85)' }}
     >
       <div className="max-w-container mx-auto px-5 h-[64px] flex items-center justify-between gap-4">
