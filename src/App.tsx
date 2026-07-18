@@ -439,11 +439,14 @@ function NewsletterProof() {
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {newsletters.map((n) => (
-            <div key={n.name} className="bg-card-2 border border-line rounded-card overflow-hidden flex flex-col">
-              <div className="h-[220px] md:h-[260px] overflow-hidden border-b border-line bg-card-3">
-                <img src={n.img} alt={`The ${n.name} newsletter`} className="w-full h-full object-cover object-top" loading="lazy" />
-              </div>
-              <div className="p-6 md:p-7">
+            <div key={n.name} className="bg-card-2 border border-line rounded-card p-6 md:p-7 flex gap-5 md:gap-6 items-start">
+              <img
+                src={n.img}
+                alt={`The ${n.name} newsletter`}
+                loading="lazy"
+                className="w-[104px] md:w-[150px] h-auto flex-shrink-0 rounded-[10px] border border-line bg-white"
+              />
+              <div className="min-w-0">
                 <p className="font-extrabold text-[22px] text-accent leading-none mb-5">{n.name}</p>
                 <ul className="flex flex-col gap-3">
                   {n.points.map((p) => (
