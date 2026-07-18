@@ -654,7 +654,6 @@ function Pricing() {
             >
               Join The Sprint →
             </a>
-            <p className="font-mono text-[12px] font-bold text-ink/70 mt-5">100% risk-free · 14-day money-back guarantee</p>
           </div>
         </div>
 
