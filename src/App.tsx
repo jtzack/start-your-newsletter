@@ -2,7 +2,7 @@ import './index.css'
 import { useState, useEffect, useRef } from 'react'
 import * as Fathom from 'fathom-client'
 
-const CTA_URL = 'https://ship.samcart.com/products/start-your-newsletter-sprint'
+const CTA_URL = 'https://ship.samcart.com/products/start-your-newsletter-sprint?coupon=ACTION100'
 
 // Cart closes the moment Day 1 kicks off: Monday, July 27, 2026, 3PM ET
 const CART_CLOSE_DATE = new Date('2026-07-27T19:00:00Z')
@@ -355,11 +355,11 @@ function Instructors() {
         <div>
           <Eyebrow className="mb-5">Meet your instructors</Eyebrow>
           <h2 className="font-extrabold text-paper uppercase tracking-display mb-6" style={{ fontSize: 'clamp(30px, 4vw, 46px)', lineHeight: 1.06 }}>
-            Learn from the team behind the internet&rsquo;s biggest newsletters.
+            Built by the founders of the internet&rsquo;s #1 writing program.
           </h2>
           <p className="text-[17px] text-fg-2 leading-[1.6] max-w-[520px] mb-8">
-            This is the internal playbook Nicolas Cole &amp; Dickie Bush have used to build (from scratch!) newsletters
-            that have driven <strong className="text-paper font-semibold">millions of dollars</strong> — taught live, over 5 days.
+            Created by Nicolas Cole &amp; Dickie Bush — the team behind <strong className="text-paper font-semibold">Ship 30 for 30</strong>,
+            the program that&rsquo;s taught over 10,000 writers to start writing online.
           </p>
           <div className="flex flex-wrap gap-2.5">
             {pills.map((s) => (
@@ -380,6 +380,100 @@ function Instructors() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ═══════════════════════════════════════════════════════════
+   4B. OUR NEWSLETTERS — PROOF
+   ═══════════════════════════════════════════════════════════ */
+function NewsletterProof() {
+  const newsletters = [
+    {
+      name: 'Category Pirates',
+      img: '/images/category-pirates.png',
+      points: [
+        'The leading newsletter on Category Design',
+        'Top 10 Business Newsletter on Substack',
+        '30,000+ free subscribers',
+        '$150,000+ per year in paid subscriptions',
+        'The engine of a 7+ figure digital product & consulting business',
+      ],
+    },
+    {
+      name: 'Write With AI',
+      img: '/images/write-with-ai.png',
+      points: [
+        'The leading newsletter on Writing With AI',
+        'Top 5 Education Newsletter on Substack',
+        '50,000+ free subscribers',
+        '$300,000+ per year in paid subscriptions',
+        'The engine of a 7+ figure digital product business',
+      ],
+    },
+    {
+      name: 'Start Writing Online',
+      img: '/images/start-writing-online.png',
+      points: [
+        'The leading newsletter on how to Start Writing Online',
+        '100,000+ free subscribers',
+        'The engine of Ship 30 for 30, the fastest-growing writing program on the Internet',
+      ],
+    },
+    {
+      name: 'Start Ghostwriting',
+      img: '/images/start-ghostwriting.png',
+      points: [
+        'The leading newsletter on how to Start Ghostwriting',
+        '100,000+ free subscribers',
+        'The engine of Premium Ghostwriting Academy, the leading ghostwriting training program on the Internet and 8-figure business',
+      ],
+    },
+  ]
+  return (
+    <section id="proof" className="py-20 md:py-28 px-5 md:px-8">
+      <div className="max-w-container mx-auto">
+        <div className="text-center mb-12">
+          <Eyebrow className="mb-4">Our newsletters</Eyebrow>
+          <h2 className="font-extrabold text-paper uppercase tracking-display mx-auto max-w-[24ch]" style={{ fontSize: 'clamp(30px, 4.4vw, 50px)', lineHeight: 1.05 }}>
+            Proof we know what we&rsquo;re talking about!
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {newsletters.map((n) => (
+            <div key={n.name} className="bg-card-2 border border-line rounded-card overflow-hidden flex flex-col">
+              <div className="h-[220px] md:h-[260px] overflow-hidden border-b border-line bg-card-3">
+                <img src={n.img} alt={`The ${n.name} newsletter`} className="w-full h-full object-cover object-top" loading="lazy" />
+              </div>
+              <div className="p-6 md:p-7">
+                <p className="font-extrabold text-[22px] text-accent leading-none mb-5">{n.name}</p>
+                <ul className="flex flex-col gap-3">
+                  {n.points.map((p) => (
+                    <li key={p} className="flex gap-3 items-start">
+                      <Check />
+                      <span className="text-[15px] leading-[1.55] text-fg-2 pt-0.5">{p}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-6 bg-card-2 border border-line rounded-card overflow-hidden grid lg:grid-cols-2 items-center">
+          <div className="p-7 md:p-10">
+            <p className="font-extrabold text-[24px] md:text-[28px] text-paper leading-tight mb-4">
+              And it&rsquo;s not just <em className="text-accent not-italic">our</em> newsletters.
+            </p>
+            <p className="text-[16px] text-fg-2 leading-[1.6] max-w-[440px]">
+              Writers inside our programs use this exact playbook to launch and grow their own newsletters —
+              here&rsquo;s a small sample of their wins.
+            </p>
+          </div>
+          <div className="p-5 md:p-8">
+            <img src="/images/syn-social-proof.png" alt="Screenshots of students sharing newsletter launches, first sales, and subscriber milestones" className="w-full h-auto" loading="lazy" />
+          </div>
         </div>
       </div>
     </section>
@@ -607,11 +701,10 @@ function AIWritingSkool() {
    ═══════════════════════════════════════════════════════════ */
 function Pricing() {
   const items = [
+    { name: 'The Start Your Newsletter Sprint Curriculum', price: '$500' },
     { name: '5 x Live Sessions (Mon–Fri, 3PM ET)', price: '$1,500' },
-    { name: 'A 5-Day Launch & Publish Schedule', price: '$500' },
-    { name: 'Done-For-You Templates For Every Session', price: '$500' },
-    { name: '5 Done-For-You AI Prompts', price: '$500' },
-    { name: 'Session Replays — Yours Forever', price: '$300' },
+    { name: 'The Sprint Session Guide', price: '$300' },
+    { name: 'Done-For-You AI Prompts & Templates', price: '$500' },
     { name: 'Lifetime Access to the Curriculum', price: 'Priceless' },
     { name: '30-Day AI Writing Skool Trial', price: '$99' },
     { name: 'BONUS: Subject Line Swipe File', price: '$199' },
@@ -637,14 +730,14 @@ function Pricing() {
             ))}
             <div className="flex justify-between items-center pt-4 mt-3 border-t border-line">
               <span className="text-[14px] font-bold text-paper uppercase tracking-[0.06em]">Total Value</span>
-              <span className="font-black text-[24px] text-paper line-through decoration-accent decoration-2">$3,796</span>
+              <span className="font-black text-[24px] text-paper line-through decoration-accent decoration-2">$3,296</span>
             </div>
           </div>
           {/* Price reveal — yellow panel */}
           <div className="bg-accent p-8 md:p-10 text-center">
             <p className="font-mono text-[11px] font-bold uppercase tracking-caps text-ink/60">Your price today</p>
             <div className="flex items-baseline justify-center gap-3 mt-2">
-              <span className="font-black text-ink/40 leading-none line-through decoration-2" style={{ fontSize: 'clamp(32px,5.5vw,48px)' }}>$149</span>
+              <span className="font-black text-ink/40 leading-none line-through decoration-2" style={{ fontSize: 'clamp(32px,5.5vw,48px)' }}>$199</span>
               <span className="font-black text-ink leading-none" style={{ fontSize: 'clamp(64px,11vw,96px)' }}>$99</span>
             </div>
             <a
@@ -654,7 +747,6 @@ function Pricing() {
             >
               Join The Sprint →
             </a>
-            <p className="font-mono text-[12px] font-bold text-ink/70 mt-5">100% risk-free · 14-day money-back guarantee</p>
           </div>
         </div>
 
@@ -680,7 +772,7 @@ function CTABand() {
           a newsletter&rdquo; to a named, positioned, published newsletter with a growth engine and a monetization plan.
         </p>
         <CTA size="lg" track="Final">Join The Sprint</CTA>
-        <p className="text-[14px] text-fg-3 mt-6">Live sprint begins Monday, July 27, 2026. Cart closes the moment Day 1 kicks off.</p>
+        <p className="text-[14px] text-fg-3 mt-6">Live sprint begins Monday, July 27, 2026.</p>
       </div>
     </section>
   )
@@ -696,9 +788,9 @@ function FAQ() {
     { q: 'I’ve never started a newsletter before. Will this work for me?', a: 'YES — the sprint is built for beginners. You don’t need an audience, a niche, or a name yet. Day 1 gives you positioning, Day 2 gives you the platform, Day 3 gives you your first issue. Total beginners are actually at an advantage: you won’t have to unlearn bad habits.' },
     { q: 'I already have a newsletter. Is this still useful?', a: 'The sprint works just as well if you’ve been publishing for a while and stalled. You’ll audit what’s not landing, fix your niche and positioning, plug in the $0 traffic engine, and leave with a monetization plan.' },
     { q: 'Which platform will we use — Kit, Beehiiv, or Substack?', a: 'Your choice — Day 2 is an entire session on exactly this decision, including the real 2026 pricing math and a framework that makes the choice 10X easier. Everything else in the sprint is platform-agnostic.' },
-    { q: 'Won’t AI-assisted writing sound generic?', a: 'Not the way we teach it. On Day 3 you’ll train AI on YOUR writing style, so drafts sound like you, not a robot. There’s a difference between AI-generated slop and AI-assisted writing — we teach the second one.' },
     { q: 'How long do I have access?', a: 'Lifetime. Every replay, template, and AI prompt is yours forever — including every update we ship to the curriculum.' },
-    { q: 'Is there a guarantee?', a: 'Yes — your Sprint investment is 100% risk free. If you go through the sessions and don’t feel like you received an insane amount of value, just send us an email within 14 days of purchase and we’ll refund 100% of your money.' },
+    { q: 'How is this different than Category Newsletter Creator?', a: 'In this 5-day sprint, we are going to cover everything you need to start & scale a newsletter. But, there are all kinds of other things you can do to market and grow your newsletter, including building advanced sequences, stacking monetization methods on top of each other, etc. Which is what we cover inside Category Newsletter Creator.' },
+    { q: 'Is there a guarantee?', a: 'We provide a tremendous amount of free education on the internet for writers. If you’re hesitant as to whether this Sprint is for you, consume some of our free stuff first. All sales are final.' },
   ]
   const [open, setOpen] = useState<number | null>(0)
   return (
@@ -763,7 +855,7 @@ function StickyCtaBar({ heroCtaRef }: { heroCtaRef: React.RefObject<HTMLAnchorEl
   }, [heroCtaRef])
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 border-t border-line backdrop-blur-md transition-transform duration-300 ${show ? 'translate-y-0' : 'translate-y-full'}`}
+      className={`fixed top-0 left-0 right-0 z-50 border-b border-line backdrop-blur-md transition-transform duration-300 ${show ? 'translate-y-0' : '-translate-y-full'}`}
       style={{ background: 'rgba(11,11,12,0.85)' }}
     >
       <div className="max-w-container mx-auto px-5 h-[64px] flex items-center justify-between gap-4">
@@ -808,6 +900,7 @@ export default function App() {
       <FadeIn><WhyNewsletter /></FadeIn>
       <FadeIn><WhatIsTheSprint /></FadeIn>
       <FadeIn><Instructors /></FadeIn>
+      <FadeIn><NewsletterProof /></FadeIn>
       <FadeIn><RightForYou /></FadeIn>
       <Divider />
       <FadeIn><LiveSessions /></FadeIn>
