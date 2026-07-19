@@ -194,21 +194,21 @@ function Hero({ ctaRef }: { ctaRef: React.RefObject<HTMLAnchorElement | null> })
       <HeroRoadmap />
       <div className="hero-vignette" aria-hidden="true" />
 
-      <div className="relative z-[2] w-full max-w-[960px] mx-auto px-5 md:px-8 py-20 text-center flex flex-col items-center">
+      <div className="hero-content relative z-[2] w-full max-w-[960px] mx-auto px-5 md:px-8 py-10 md:py-14 text-center flex flex-col items-center">
         <div className="inline-flex items-center gap-2.5 border border-accent/40 bg-accent-soft rounded-full px-4 py-2 font-mono text-[12px] font-bold uppercase tracking-caps text-accent">
           <span className="pulse-dot w-2 h-2 rounded-full bg-accent flex-shrink-0" />
           Live Sprint Begins Monday, July 27
         </div>
 
         <h1
-          className="font-black text-paper uppercase mt-8"
-          style={{ fontSize: 'clamp(40px, 6vw, 84px)', lineHeight: 0.96, letterSpacing: '-0.01em', textWrap: 'balance' as React.CSSProperties['textWrap'] }}
+          className="font-black text-paper uppercase mt-6"
+          style={{ fontSize: 'clamp(32px, 4.6vw, 64px)', lineHeight: 0.98, letterSpacing: '-0.01em', textWrap: 'balance' as React.CSSProperties['textWrap'] }}
         >
-          <span className="hl">Start &amp; Scale</span> Your Newsletter{' '}
-          <span className="text-accent italic normal-case">in 5 Days</span>
+          Build A <span className="hl">6&#8209;Figure Newsletter</span> From Scratch{' '}
+          <span className="text-accent italic normal-case">in just 5 days</span>
         </h1>
 
-        <p className="text-fg-2 max-w-[620px] mt-7" style={{ fontSize: 'clamp(16px, 1.5vw, 20px)', lineHeight: 1.55 }}>
+        <p className="text-fg-2 max-w-[620px] mt-5" style={{ fontSize: 'clamp(16px, 1.5vw, 20px)', lineHeight: 1.55 }}>
           A 1-week live experience to help you <strong className="text-paper font-bold">start your newsletter</strong>, position
           it as the &ldquo;category king&rdquo; of your niche, and start{' '}
           <strong className="text-paper font-bold">growing (and monetizing)</strong> it — in 5 days.
@@ -218,7 +218,7 @@ function Hero({ ctaRef }: { ctaRef: React.RefObject<HTMLAnchorElement | null> })
           ref={ctaRef}
           href={CTA_URL}
           onClick={() => trackCTA('Hero')}
-          className="cta-glow inline-flex items-center justify-center mt-9 font-extrabold uppercase text-[16px] tracking-[0.02em] text-ink bg-accent rounded-btn px-10 py-[18px] transition-[transform,filter] duration-150 hover:brightness-[1.08] active:scale-[0.98]"
+          className="cta-glow inline-flex items-center justify-center mt-7 font-extrabold uppercase text-[16px] tracking-[0.02em] text-ink bg-accent rounded-btn px-10 py-[18px] transition-[transform,filter] duration-150 hover:brightness-[1.08] active:scale-[0.98]"
         >
           Join The Sprint
         </a>
@@ -240,7 +240,7 @@ function Hero({ ctaRef }: { ctaRef: React.RefObject<HTMLAnchorElement | null> })
           />
         </div>
 
-        <p className="font-mono text-[11px] font-bold uppercase text-fg-3 mt-12 mb-4" style={{ letterSpacing: '0.22em' }}>Cart Closes In</p>
+        <p className="font-mono text-[11px] font-bold uppercase text-fg-3 mt-8 md:mt-10 mb-4" style={{ letterSpacing: '0.22em' }}>Cart Closes In</p>
         <CountdownTimer targetDate={CART_CLOSE_DATE} hero />
       </div>
     </header>
@@ -298,10 +298,6 @@ function WhatIsTheSprint() {
           <h2 className="font-extrabold text-paper uppercase tracking-display max-w-[20ch]" style={{ fontSize: 'clamp(30px, 4.6vw, 52px)', lineHeight: 1.05 }}>
             What is the Start &amp; Scale Your Newsletter Sprint?
           </h2>
-          <p className="text-[17px] text-fg-2 max-w-[680px] mt-5 leading-[1.6]">
-            A live, 5-day SPRINT — not another course collecting dust on your digital shelf. Every day you show up,
-            we build together, and you leave the session with the next piece of your newsletter <em className="text-paper not-italic font-semibold">done</em>.
-          </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="flex justify-center lg:justify-start">
@@ -443,11 +439,14 @@ function NewsletterProof() {
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {newsletters.map((n) => (
-            <div key={n.name} className="bg-card-2 border border-line rounded-card overflow-hidden flex flex-col">
-              <div className="h-[220px] md:h-[260px] overflow-hidden border-b border-line bg-card-3">
-                <img src={n.img} alt={`The ${n.name} newsletter`} className="w-full h-full object-cover object-top" loading="lazy" />
-              </div>
-              <div className="p-6 md:p-7">
+            <div key={n.name} className="bg-card-2 border border-line rounded-card p-6 md:p-7 flex gap-5 md:gap-6 items-start">
+              <img
+                src={n.img}
+                alt={`The ${n.name} newsletter`}
+                loading="lazy"
+                className="w-[104px] md:w-[150px] h-auto flex-shrink-0 rounded-[10px] border border-line bg-white"
+              />
+              <div className="min-w-0">
                 <p className="font-extrabold text-[22px] text-accent leading-none mb-5">{n.name}</p>
                 <ul className="flex flex-col gap-3">
                   {n.points.map((p) => (
