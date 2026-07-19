@@ -607,7 +607,7 @@ function BonusSection() {
   const bonuses = [
     { tag: 'Bonus #1', title: 'Subject Line Swipe File', desc: 'How to write irresistible subject lines with AI — plus the 5 golden rules to follow for every email that almost guarantee your newsletter gets opened.', value: '$199', icon: '/images/bonus-subject-lines.webp' },
     { tag: 'Bonus #2', title: 'Newsletter Opening Hooks', desc: 'The exact prompt we use to generate strong opening hooks for emails and posts. Give it your topic and it produces multiple hook angles designed to stop readers and make them keep reading.', value: '$99', icon: '/images/bonus-hooks.webp' },
-    { tag: 'Bonus #3', title: '30-Day Free Trial To Ghostbase', desc: 'Ghostbase is a custom AI model trained on Nicolas Cole’s library of content (well over a billion views) and a decade of writing experience. Just describe what you want to write and it generates premium content that sounds like you, built for LinkedIn.', value: '$99', icon: '/images/bonus-ghostbase.webp' },
+    { tag: 'Bonus #3', title: '30-Day Free Trial To Ghostbase', desc: 'Ghostbase is a custom AI model trained on Nicolas Cole’s library of content (well over a billion views) and a decade of writing experience. Just describe what you want to write and it generates premium content that sounds like you.', value: '$99', icon: '/images/bonus-ghostbase.webp' },
   ]
   return (
     <section id="bonuses" className="py-20 md:py-28 px-5 md:px-8">
